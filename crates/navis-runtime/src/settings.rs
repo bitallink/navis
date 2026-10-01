@@ -30,8 +30,8 @@ pub enum Language {
 /// - **Removing a field**: just delete it from the struct. serde ignores
 ///   unknown JSON fields by default.
 ///
-/// For non-trivial migrations (type changes, splits, joins) see
-/// `carlosjortiz/navis-prd#37`.
+/// Non-trivial migrations (type changes, splits, joins) are not supported by
+/// this scheme yet.
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize, specta::Type)]
 pub struct Settings {
     #[serde(default = "default_theme")]

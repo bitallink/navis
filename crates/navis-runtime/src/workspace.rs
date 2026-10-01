@@ -31,7 +31,8 @@ struct WorkspaceFile {
 /// - **Removing a field**: just delete it. serde ignores unknown JSON fields by
 ///   default.
 ///
-/// For non-trivial migrations (type-change, split, join) see navis-prd#37.
+/// Non-trivial migrations (type-change, split, join) are not supported by this
+/// scheme yet.
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize, specta::Type)]
 pub struct Workspace {
     /// The directory name under `~/.navis/workspaces/`. Populated at load time.
